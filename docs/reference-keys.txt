@@ -6,3 +6,4 @@ variables-del-perfil-lingüistico
 variables-de-english-medium-instruction-emi
 variables-adicionales
 eda
+análisis-de-las-variables-sociodemográficas
