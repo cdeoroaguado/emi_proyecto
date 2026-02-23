@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Proyecto EMI</title>
+  <meta name="description" content="Aqui vamos a realizar el análisis exploratorio de los datos y la validación del instrumento" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Proyecto EMI" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Aqui vamos a realizar el análisis exploratorio de los datos y la validación del instrumento" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Proyecto EMI" />
+  
+  <meta name="twitter:description" content="Aqui vamos a realizar el análisis exploratorio de los datos y la validación del instrumento" />
+  
+
+<meta name="author" content="Docentes de ingles y ciencia de datos" />
+
+
+<meta name="date" content="2026-02-22" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+<link rel="next" href="oper.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Proyecto EMI</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Contexto del problema</a></li>
+<li class="chapter" data-level="2" data-path="oper.html"><a href="oper.html"><i class="fa fa-check"></i><b>2</b> Operacionalización de las variables</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="index.html"><a href="#variables-sociodemogr%C3%A1ficas"><i class="fa fa-check"></i><b>2.1</b> Variables sociodemográficas</a></li>
+<li class="chapter" data-level="2.2" data-path="oper.html"><a href="oper.html#variables-de-antecedentes-educativos"><i class="fa fa-check"></i><b>2.2</b> Variables de antecedentes educativos</a></li>
+<li class="chapter" data-level="2.3" data-path="index.html"><a href="#variables-del-perfil-ling%C3%BCistico"><i class="fa fa-check"></i><b>2.3</b> Variables del perfil lingüistico</a></li>
+<li class="chapter" data-level="2.4" data-path="oper.html"><a href="oper.html#variables-de-english-medium-instruction-emi"><i class="fa fa-check"></i><b>2.4</b> Variables de English-Medium Instruction, EMI</a></li>
+<li class="chapter" data-level="2.5" data-path="oper.html"><a href="oper.html#variables-adicionales"><i class="fa fa-check"></i><b>2.5</b> Variables adicionales</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i>Referencias</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Proyecto EMI</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">Proyecto EMI</h1>
+<p class="author"><em>Docentes de ingles y ciencia de datos</em></p>
+<p class="date"><em>2026-02-22</em></p>
+</div>
+<div id="contexto-del-problema" class="section level1 hasAnchor" number="1">
+<h1><span class="header-section-number">Capítulo 1</span> Contexto del problema<a href="index.html#contexto-del-problema" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Hoy en día, los estudiantes deben poseer competencias transversales, incluyendo la competencia intercultural (CI), que es crucial para entender “al otro”, vivir en la diversidad y resolver conflictos o tensiones en entornos culturales diferentes a lo largo de su vida profesional, lo que requiere la adquisición de más que contenido puramente disciplinario en el entorno de la educación superior. El documento establece esta necesidad en un mundo que se está volviendo más interconectado, donde la diversidad trae no solo oportunidades sino también desigualdades y discriminación que se espera que las universidades combatan a través de la educación.</p>
+<p>El problema en sí, es que aunque ya existe un proyecto universitario en Colombia para desarrollar la CI, evaluar sistemáticamente su desarrollo sigue siendo un desafío significativo. Como se dice, no hay instrumentos validados en el país que proporcionen herramientas consistentes y contextuales para medir la competencia intercultural en los estudiantes universitarios, lo que plantea desafíos para el diagnóstico, el monitoreo y la toma de decisiones basadas en evidencia dentro de las IES.</p>
+<p>Y aunque existen algunas herramientas internacionales para medir la CI (por ejemplo, escalas o inventarios de CI introducidos en otros países), el documento señala que no siempre funcionan en el contexto latinoamericano-colombiano y son costosos en muchos casos. Por lo tanto, las instituciones tienden a “importar” sus propios modelos de otros lugares, en lugar de analizarlos críticamente, lo que lleva a la medición de habilidades que no pueden ser válidas o están sesgadas hacia la realidad local de los estudiantes y universidades ubicadas en diferentes regiones del país.</p>
+<p>Así, el proyecto propuesto sirve como respuesta para desarrollar y establecer un instrumento con estudiantes universitarios colombianos: se formula el constructo y las dimensiones, se desarrollan los ítems y escalas (es decir, tipo Likert), se valida con jueces expertos y, finalmente, se realiza un estudio piloto seguido de una prueba psicométrica (como el alfa de Cronbach y el análisis factorial) para asegurar la fiabilidad y validez. Nuestro objetivo es desarrollar un instrumento valioso para fomentar políticas de internacionalización y la realización de la ciudadanía global con un valor real para la educación superior de nuestro país.</p>
+
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="oper.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+  "sharing": {
+    "github": false,
+    "facebook": true,
+    "twitter": true,
+    "linkedin": false,
+    "weibo": false,
+    "instapaper": false,
+    "vk": false,
+    "whatsapp": false,
+    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+  },
+  "fontsettings": {
+    "theme": "white",
+    "family": "sans",
+    "size": 2
+  },
+  "edit": {
+    "link": "https://github.com/rstudio/bookdown-demo/edit/master/index.Rmd",
+    "text": "Edit"
+  },
+  "history": {
+    "link": null,
+    "text": null
+  },
+  "view": {
+    "link": null,
+    "text": null
+  },
+  "download": ["bookdown-demo.pdf", "bookdown-demo.epub"],
+  "search": {
+    "engine": "fuse",
+    "options": null
+  },
+  "toc": {
+    "collapse": "subsection"
+  }
+});
+});
+</script>
+
+</body>
+
+</html>

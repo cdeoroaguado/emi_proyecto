@@ -1,0 +1,12 @@
+fig:nice-fig
+tab:nice-tab
+introducción-a-emi
+intro
+contexto-del-problema
+oper
+variables-sociodemográficas
+variables-de-antecedentes-educativos
+variables-del-perfil-lingüistico
+english-medium-instruction-emi
+variables-adicionales
+variables-de-english-medium-instruction-emi
