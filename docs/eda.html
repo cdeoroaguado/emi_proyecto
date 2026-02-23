@@ -49,13 +49,10 @@
 
 
 
+<link href="libs/codefolding-lua-1.1/codefolding-lua.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
-<script src="libs/kePrint-0.0.1/kePrint.js"></script>
-<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
-<link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
-<script src="libs/bsTable-3.3.7/bootstrapTable.js"></script>
 
 
 
@@ -118,68 +115,224 @@
 <h1><span class="header-section-number">Capítulo 3</span> Análisis exploratorio<a href="eda.html#eda" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <div id="análisis-de-las-variables-sociodemográficas" class="section level2 hasAnchor" number="3.1">
 <h2><span class="header-section-number">3.1</span> Análisis de las variables sociodemográficas<a href="#an%C3%A1lisis-de-las-variables-sociodemogr%C3%A1ficas" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<table class="table" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
-<caption>
-(#tab:edad_num)Resumen descriptivo de la Edad
-</caption>
+<table>
+<caption>(#tab:edad_num)Resumen descriptivo de la Edad</caption>
 <thead>
-<tr>
-<th style="text-align:right;">
-n
-</th>
-<th style="text-align:right;">
-prom
-</th>
-<th style="text-align:right;">
-ds
-</th>
-<th style="text-align:right;">
-mediana
-</th>
-<th style="text-align:right;">
-q1
-</th>
-<th style="text-align:right;">
-q3
-</th>
-<th style="text-align:right;">
-edad_min
-</th>
-<th style="text-align:right;">
-edad_max
-</th>
+<tr class="header">
+<th align="right">n</th>
+<th align="right">prom</th>
+<th align="right">ds</th>
+<th align="right">mediana</th>
+<th align="right">q1</th>
+<th align="right">q3</th>
+<th align="right">edad_min</th>
+<th align="right">edad_max</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:right;">
-273
-</td>
-<td style="text-align:right;">
-22.81
-</td>
-<td style="text-align:right;">
-1.36
-</td>
-<td style="text-align:right;">
-23
-</td>
-<td style="text-align:right;">
-22
-</td>
-<td style="text-align:right;">
-23
-</td>
-<td style="text-align:right;">
-20
-</td>
-<td style="text-align:right;">
-28
-</td>
+<tr class="odd">
+<td align="right">273</td>
+<td align="right">22.81</td>
+<td align="right">1.36</td>
+<td align="right">23</td>
+<td align="right">22</td>
+<td align="right">23</td>
+<td align="right">20</td>
+<td align="right">28</td>
 </tr>
 </tbody>
 </table>
-<p>Un total de 273 estudiantes completó el cuestionario. Para el análisis descriptivo de la edad, se excluyeron 3 registros por datos faltantes, por lo que se contó con 270 estudiantes. La edad de los participantes presentó un promedio de 22.81 años (DE = 1.36 años), donde el <span class="math inline">\(50\%\)</span> de los participates tiene edad menor o igual 23 años. Además, las edades oscilaron entre 20 y 28 años.</p>
+<p>En este estudio se recolectaron datos mediante un cuestionario en línea para caracterizar a los participantes y contextualizar los análisis posteriores. Un total de 273 estudiantes completó el cuestionario. Para el análisis descriptivo de la edad, se excluyeron 3 registros por datos faltantes, por lo que se contó con 270 estudiantes. La edad de los participantes presentó un promedio de 22.81 años (DE = 1.36 años), donde el <span class="math inline">\(50\%\)</span> de los participates tiene edad menor o igual 23 años. Además, las edades oscilaron entre 20 y 28 años (ver <code>Tabla \@ref(tab:edad_num)</code>).</p>
+<table>
+<caption>(#tab:vars_cat_falt)Resumen general (n válidos, faltantes y % faltantes)</caption>
+<colgroup>
+<col width="64%" />
+<col width="5%" />
+<col width="12%" />
+<col width="17%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Variable</th>
+<th align="right">n</th>
+<th align="right">faltantes</th>
+<th align="right">pct_faltantes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Género</td>
+<td align="right">273</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr class="even">
+<td align="left">Estrato socioeconómico</td>
+<td align="right">273</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr class="odd">
+<td align="left">Tipo de colegio</td>
+<td align="right">273</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr class="even">
+<td align="left">El colegio donde cursó su bachillerato es bilingüe</td>
+<td align="right">273</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr class="odd">
+<td align="left">Programa</td>
+<td align="right">273</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr class="even">
+<td align="left">Semestre actual</td>
+<td align="right">273</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+</tbody>
+</table>
+<p>En relación con la calidad de los datos para las variables sociodemográficas analizadas (Género, Estrato socioeconómico, Tipo de colegio, colegio bilingüe y Semestre actual), no se identificaron valores faltantes (0 casos; 0% de datos perdidos). Esto evidencia una completitud total en estas variables, lo que permite realizar los análisis descriptivos posteriores sin necesidad de imputación o exclusión de casos por ausencia de información.</p>
+<table style="width:100%;">
+<caption>(#tab:socio_demo)Distribución de variables sociodemográficas (conteo y porcentaje)</caption>
+<colgroup>
+<col width="54%" />
+<col width="29%" />
+<col width="4%" />
+<col width="11%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Variable</th>
+<th align="left">Categoría</th>
+<th align="right">n</th>
+<th align="right">porcentaje</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Género</td>
+<td align="left">Masculino</td>
+<td align="right">141</td>
+<td align="right">51.65</td>
+</tr>
+<tr class="even">
+<td align="left">Género</td>
+<td align="left">Femenino</td>
+<td align="right">132</td>
+<td align="right">48.35</td>
+</tr>
+<tr class="odd">
+<td align="left">Estrato socioeconómico</td>
+<td align="left">1</td>
+<td align="right">17</td>
+<td align="right">6.23</td>
+</tr>
+<tr class="even">
+<td align="left">Estrato socioeconómico</td>
+<td align="left">2</td>
+<td align="right">32</td>
+<td align="right">11.72</td>
+</tr>
+<tr class="odd">
+<td align="left">Estrato socioeconómico</td>
+<td align="left">3</td>
+<td align="right">59</td>
+<td align="right">21.61</td>
+</tr>
+<tr class="even">
+<td align="left">Estrato socioeconómico</td>
+<td align="left">4</td>
+<td align="right">67</td>
+<td align="right">24.54</td>
+</tr>
+<tr class="odd">
+<td align="left">Estrato socioeconómico</td>
+<td align="left">5</td>
+<td align="right">48</td>
+<td align="right">17.58</td>
+</tr>
+<tr class="even">
+<td align="left">Estrato socioeconómico</td>
+<td align="left">6</td>
+<td align="right">50</td>
+<td align="right">18.32</td>
+</tr>
+<tr class="odd">
+<td align="left">Tipo de colegio</td>
+<td align="left">Privado</td>
+<td align="right">223</td>
+<td align="right">81.68</td>
+</tr>
+<tr class="even">
+<td align="left">Tipo de colegio</td>
+<td align="left">Público</td>
+<td align="right">50</td>
+<td align="right">18.32</td>
+</tr>
+<tr class="odd">
+<td align="left">El colegio donde cursó su bachillerato es bilingüe</td>
+<td align="left">Sí</td>
+<td align="right">146</td>
+<td align="right">53.48</td>
+</tr>
+<tr class="even">
+<td align="left">El colegio donde cursó su bachillerato es bilingüe</td>
+<td align="left">No</td>
+<td align="right">127</td>
+<td align="right">46.52</td>
+</tr>
+<tr class="odd">
+<td align="left">Programa</td>
+<td align="left">Administración de Empresas</td>
+<td align="right">158</td>
+<td align="right">57.88</td>
+</tr>
+<tr class="even">
+<td align="left">Programa</td>
+<td align="left">Negocios Internacionales</td>
+<td align="right">79</td>
+<td align="right">28.94</td>
+</tr>
+<tr class="odd">
+<td align="left">Programa</td>
+<td align="left">Contaduría Pública</td>
+<td align="right">36</td>
+<td align="right">13.19</td>
+</tr>
+<tr class="even">
+<td align="left">Semestre actual</td>
+<td align="left">7</td>
+<td align="right">33</td>
+<td align="right">12.09</td>
+</tr>
+<tr class="odd">
+<td align="left">Semestre actual</td>
+<td align="left">8</td>
+<td align="right">92</td>
+<td align="right">33.70</td>
+</tr>
+<tr class="even">
+<td align="left">Semestre actual</td>
+<td align="left">9</td>
+<td align="right">44</td>
+<td align="right">16.12</td>
+</tr>
+<tr class="odd">
+<td align="left">Semestre actual</td>
+<td align="left">10</td>
+<td align="right">104</td>
+<td align="right">38.10</td>
+</tr>
+</tbody>
+</table>
+<p>Los participantes fueron estudiantes de pregrado matriculados en tres programas académicos: Administración de Empresas (158; 57.88%), Negocios Internacionales (79; 28.94%) y Contaduría Pública (36; 13.19%). El semestre cursado osciló entre séptimo y décimo, con una mayor proporción de estudiantes en décimo semestre (104; 38.1%) y octavo semestre (92; 33.7%). En cuanto al género, 132 (48.35%) participantes se identificaron como femenino y 141 (51.65%) como masculino. La mayoría de los estudiantes provenía de colegios privados (223; 81.68%) y 146 reportó haber cursado el bachillerato en un colegio bilingüe (53.48%). En términos socioeconómicos, la distribución se concentró en los estratos 4 (67; 24.54%) y 3 (59; 21.61%), seguidos por los estratos 6, 5, 2 y 1 (ver <code>Tabla \@ref(tab:socio_demo)</code>).</p>
 
 </div>
 </div>

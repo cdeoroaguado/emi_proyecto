@@ -23,7 +23,7 @@
 <meta name="author" content="Docentes de ingles y ciencia de datos" />
 
 
-<meta name="date" content="2026-02-22" />
+<meta name="date" content="2026-02-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -49,13 +49,10 @@
 
 
 
+<link href="libs/codefolding-lua-1.1/codefolding-lua.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
-<script src="libs/kePrint-0.0.1/kePrint.js"></script>
-<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
-<link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
-<script src="libs/bsTable-3.3.7/bootstrapTable.js"></script>
 
 
 
@@ -89,7 +86,10 @@
 <li class="chapter" data-level="2.4" data-path="oper.html"><a href="oper.html#variables-de-english-medium-instruction-emi"><i class="fa fa-check"></i><b>2.4</b> Variables de English-Medium Instruction, EMI</a></li>
 <li class="chapter" data-level="2.5" data-path="oper.html"><a href="oper.html#variables-adicionales"><i class="fa fa-check"></i><b>2.5</b> Variables adicionales</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="eda.html"><a href="eda.html"><i class="fa fa-check"></i><b>3</b> Análisis exploratorio</a></li>
+<li class="chapter" data-level="3" data-path="eda.html"><a href="eda.html"><i class="fa fa-check"></i><b>3</b> Análisis exploratorio</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="01-ope.html"><a href="#an%C3%A1lisis-de-las-variables-sociodemogr%C3%A1ficas"><i class="fa fa-check"></i><b>3.1</b> Análisis de las variables sociodemográficas</a></li>
+</ul></li>
 <li class="chapter" data-level="" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i>Referencias</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/rstudio/bookdown" target="blank">Publicado con Bookdown</a></li>
@@ -116,100 +116,55 @@
 <div id="variables-sociodemográficas" class="section level2 hasAnchor" number="2.1">
 <h2><span class="header-section-number">2.1</span> Variables sociodemográficas<a href="#variables-sociodemogr%C3%A1ficas" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Las variables sociodemográficas empleadas fueron las siguientes: para definir a las personas estudiadas y posicionar sus condiciones educativas, escolares y socioeconómicas. Estas variables permiten describir la composición de una muestra (en términos de programa, semestre, género y edad) así como proporcionar información clave sobre trayectorias educativas previas y capital educativo del hogar (como tipo de escuela, bilingüismo escolar y educación de los padres), nivel socioeconómico (estrato). Colectivamente, estos descriptores han proporcionado una base para interpretar estos resultados y explorar posibles diferencias entre subgrupos.</p>
-<table class="table" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
-<caption>
-(#tab:var_socio)Variables Sociodemográficas
-</caption>
+<table>
+<caption>(#tab:var_socio)Variables Sociodemográficas</caption>
+<colgroup>
+<col width="26%" />
+<col width="60%" />
+<col width="12%" />
+</colgroup>
 <thead>
-<tr>
-<th style="text-align:left;">
-Variable
-</th>
-<th style="text-align:left;">
-Categorias
-</th>
-<th style="text-align:left;">
-Nivel_Medicion
-</th>
+<tr class="header">
+<th align="left">Variable</th>
+<th align="left">Categorias</th>
+<th align="left">Nivel_Medicion</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:left;">
-Programa académico
-</td>
-<td style="text-align:left;">
-Administración de Empresas, Negocios Internacionales, Contaduría Pública
-</td>
-<td style="text-align:left;">
-Nominal
-</td>
+<tr class="odd">
+<td align="left">Programa académico</td>
+<td align="left">Administración de Empresas, Negocios Internacionales, Contaduría Pública</td>
+<td align="left">Nominal</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-Semestre actual
-</td>
-<td style="text-align:left;">
-7, 8, 9, 10
-</td>
-<td style="text-align:left;">
-Ordinal
-</td>
+<tr class="even">
+<td align="left">Semestre actual</td>
+<td align="left">7, 8, 9, 10</td>
+<td align="left">Ordinal</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-Edad
-</td>
-<td style="text-align:left;">
-18,19,20,21
-</td>
-<td style="text-align:left;">
-numérica
-</td>
+<tr class="odd">
+<td align="left">Año de nacimiento</td>
+<td align="left">18,19,20,21</td>
+<td align="left">numérica</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-Sexo
-</td>
-<td style="text-align:left;">
-Masculino, Femenino
-</td>
-<td style="text-align:left;">
-Nominal
-</td>
+<tr class="even">
+<td align="left">Sexo</td>
+<td align="left">Masculino, Femenino</td>
+<td align="left">Nominal</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-Tipo de colegio (bachillerato)
-</td>
-<td style="text-align:left;">
-Público, Privado
-</td>
-<td style="text-align:left;">
-Nominal
-</td>
+<tr class="odd">
+<td align="left">Tipo de colegio (bachillerato)</td>
+<td align="left">Público, Privado</td>
+<td align="left">Nominal</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-Colegio bilingüe (bachillerato)
-</td>
-<td style="text-align:left;">
-Sí, No
-</td>
-<td style="text-align:left;">
-Nominal
-</td>
+<tr class="even">
+<td align="left">Colegio bilingüe (bachillerato)</td>
+<td align="left">Sí, No</td>
+<td align="left">Nominal</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-Estrato socioeconómico
-</td>
-<td style="text-align:left;">
-Estratos 1–6
-</td>
-<td style="text-align:left;">
-Ordinal
-</td>
+<tr class="odd">
+<td align="left">Estrato socioeconómico</td>
+<td align="left">Estratos 1–6</td>
+<td align="left">Ordinal</td>
 </tr>
 </tbody>
 </table>
@@ -217,67 +172,40 @@ Ordinal
 <div id="variables-de-antecedentes-educativos" class="section level2 hasAnchor" number="2.2">
 <h2><span class="header-section-number">2.2</span> Variables de antecedentes educativos<a href="oper.html#variables-de-antecedentes-educativos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Estas son las variables de antecedentes educativos, que representan el camino educativo previo de los participantes y el contexto escolar, en este estudio. Esas variables comprenden el tipo de institución donde asistieron a la escuela secundaria (pública o privada), la exposición a la educación bilingüe y el nivel educativo alcanzado por la madre y el padre (como una estimación del nivel de capital educativo del hogar). Combinados, todos estos elementos permiten situar el perfil académico de la muestra en contexto, y también proporcionan elementos para la interpretación y explicación de la variación en los resultados dependientes de sus experiencias educativas previas.</p>
-<table class="table" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
-<caption>
-(#tab:var_edac)Variables de Antecedentes Educativos
-</caption>
+<table>
+<caption>(#tab:var_edac)Variables de Antecedentes Educativos</caption>
+<colgroup>
+<col width="29%" />
+<col width="56%" />
+<col width="13%" />
+</colgroup>
 <thead>
-<tr>
-<th style="text-align:left;">
-Variable
-</th>
-<th style="text-align:left;">
-Categorias
-</th>
-<th style="text-align:left;">
-Nivel_Medicion
-</th>
+<tr class="header">
+<th align="left">Variable</th>
+<th align="left">Categorias</th>
+<th align="left">Nivel_Medicion</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:left;">
-Tipo de colegio (bachillerato)
-</td>
-<td style="text-align:left;">
-Público, Privado
-</td>
-<td style="text-align:left;">
-Nominal
-</td>
+<tr class="odd">
+<td align="left">Tipo de colegio (bachillerato)</td>
+<td align="left">Público, Privado</td>
+<td align="left">Nominal</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-Colegio bilingüe (bachillerato)
-</td>
-<td style="text-align:left;">
-Sí, No
-</td>
-<td style="text-align:left;">
-Nominal
-</td>
+<tr class="even">
+<td align="left">Colegio bilingüe (bachillerato)</td>
+<td align="left">Sí, No</td>
+<td align="left">Nominal</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-Escolaridad máxima de la madre
-</td>
-<td style="text-align:left;">
-Primaria, Bachillerato, Técnico/Tecnólogo, Pregrado, Posgrado
-</td>
-<td style="text-align:left;">
-Ordinal
-</td>
+<tr class="odd">
+<td align="left">Escolaridad máxima de la madre</td>
+<td align="left">Primaria, Bachillerato, Técnico/Tecnólogo, Pregrado, Posgrado</td>
+<td align="left">Ordinal</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-Escolaridad máxima del padre
-</td>
-<td style="text-align:left;">
-Primaria, Bachillerato, Técnico/Tecnólogo, Pregrado, Posgrado
-</td>
-<td style="text-align:left;">
-Ordinal
-</td>
+<tr class="even">
+<td align="left">Escolaridad máxima del padre</td>
+<td align="left">Primaria, Bachillerato, Técnico/Tecnólogo, Pregrado, Posgrado</td>
+<td align="left">Ordinal</td>
 </tr>
 </tbody>
 </table>
@@ -285,78 +213,45 @@ Ordinal
 <div id="variables-del-perfil-lingüistico" class="section level2 hasAnchor" number="2.3">
 <h2><span class="header-section-number">2.3</span> Variables del perfil lingüistico<a href="#variables-del-perfil-ling%C3%BCistico" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Lo siguiente es un perfil lingüístico de los participantes, entendido como su autopercepción de su competencia en inglés tanto a nivel global como por habilidades específicas (hablar, escuchar, leer y escribir). Las variables proporcionan contexto para la exposición y el rendimiento percibido en el idioma, y son fundamentales para interpretar los hallazgos de la experiencia intercultural, la formación académica y las posibles diferencias entre subgrupos en función de la competencia lingüística.</p>
-<table class="table" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
-<caption>
-(#tab:var_ling)Variables del Perfil Lingüístico (Percepción en inglés)
-</caption>
+<table>
+<caption>(#tab:var_ling)Variables del Perfil Lingüístico (Percepción en inglés)</caption>
+<colgroup>
+<col width="43%" />
+<col width="38%" />
+<col width="18%" />
+</colgroup>
 <thead>
-<tr>
-<th style="text-align:left;">
-Variable
-</th>
-<th style="text-align:left;">
-Categorias
-</th>
-<th style="text-align:left;">
-Nivel_Medicion
-</th>
+<tr class="header">
+<th align="left">Variable</th>
+<th align="left">Categorias</th>
+<th align="left">Nivel_Medicion</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:left;">
-Nivel de inglés percibido (general)
-</td>
-<td style="text-align:left;">
-Malo, Regular, Bueno, Excelente
-</td>
-<td style="text-align:left;">
-Ordinal
-</td>
+<tr class="odd">
+<td align="left">Nivel de inglés percibido (general)</td>
+<td align="left">Malo, Regular, Bueno, Excelente</td>
+<td align="left">Ordinal</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-Nivel de habla en inglés
-</td>
-<td style="text-align:left;">
-Malo, Regular, Bueno, Excelente
-</td>
-<td style="text-align:left;">
-Ordinal
-</td>
+<tr class="even">
+<td align="left">Nivel de habla en inglés</td>
+<td align="left">Malo, Regular, Bueno, Excelente</td>
+<td align="left">Ordinal</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-Nivel de escucha en inglés
-</td>
-<td style="text-align:left;">
-Malo, Regular, Bueno, Excelente
-</td>
-<td style="text-align:left;">
-Ordinal
-</td>
+<tr class="odd">
+<td align="left">Nivel de escucha en inglés</td>
+<td align="left">Malo, Regular, Bueno, Excelente</td>
+<td align="left">Ordinal</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-Nivel de lectura en inglés
-</td>
-<td style="text-align:left;">
-Malo, Regular, Bueno, Excelente
-</td>
-<td style="text-align:left;">
-Ordinal
-</td>
+<tr class="even">
+<td align="left">Nivel de lectura en inglés</td>
+<td align="left">Malo, Regular, Bueno, Excelente</td>
+<td align="left">Ordinal</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-Nivel de escritura en inglés
-</td>
-<td style="text-align:left;">
-Malo, Regular, Bueno, Excelente
-</td>
-<td style="text-align:left;">
-Ordinal
-</td>
+<tr class="odd">
+<td align="left">Nivel de escritura en inglés</td>
+<td align="left">Malo, Regular, Bueno, Excelente</td>
+<td align="left">Ordinal</td>
 </tr>
 </tbody>
 </table>
@@ -364,497 +259,252 @@ Ordinal
 <div id="variables-de-english-medium-instruction-emi" class="section level2 hasAnchor" number="2.4">
 <h2><span class="header-section-number">2.4</span> Variables de English-Medium Instruction, EMI<a href="oper.html#variables-de-english-medium-instruction-emi" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>En general, todas estas variables cubren el tema más importante de la experiencia estudiantil y el rendimiento percibido en cursos impartidos en inglés (Instrucción en Inglés, EMI). En particular, reflejan cómo el uso del inglés influye en la comprensión del contenido, la participación en clase, la autoeficacia y las barreras lingüísticas, el rendimiento académico percibido y la evaluación general del programa (esfuerzo requerido, comodidad, fatiga mental, disposición a continuar y recomendación). Además, tienen una parte relacionada con las mejoras percibidas en las habilidades relacionadas con el idioma después de tomar cursos en inglés.</p>
-<table class="table" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
-<caption>
-(#tab:var_emi)Categorías observadas en la base para ítems asociados a factores
-</caption>
+<table>
+<caption>(#tab:var_emi)Categorías observadas en la base para ítems asociados a factores</caption>
+<colgroup>
+<col width="55%" />
+<col width="38%" />
+<col width="5%" />
+</colgroup>
 <thead>
-<tr>
-<th style="text-align:left;">
-Variable
-</th>
-<th style="text-align:left;">
-Categorias_observadas
-</th>
-<th style="text-align:left;">
-Nivel_Medicion
-</th>
+<tr class="header">
+<th align="left">Variable</th>
+<th align="left">Categorias_observadas</th>
+<th align="left">Nivel_Medicion</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:left;">
-En general, comprendí las explicaciones en inglés dadas por los profesores.
-</td>
-<td style="text-align:left;">
-Parcialmente en desacuerdo, Indiferente, Parcialmente de acuerdo, Totalmente de acuerdo
-</td>
-<td style="text-align:left;">
-Ordinal (Likert)
-</td>
+<tr class="odd">
+<td align="left">En general, comprendí las explicaciones en inglés dadas por los profesores.</td>
+<td align="left">Parcialmente en desacuerdo, Indiferente, Parcialmente de acuerdo, Totalmente de acuerdo</td>
+<td align="left">Ordinal (Likert)</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-Leer textos académicos en inglés fue un reto que dificultó mi comprensión de las temáticas del curso.
-</td>
-<td style="text-align:left;">
-Totalmente en desacuerdo, Parcialmente en desacuerdo, Indiferente, Parcialmente de acuerdo, Totalmente de acuerdo
-</td>
-<td style="text-align:left;">
-Ordinal (Likert)
-</td>
+<tr class="even">
+<td align="left">Leer textos académicos en inglés fue un reto que dificultó mi comprensión de las temáticas del curso.</td>
+<td align="left">Totalmente en desacuerdo, Parcialmente en desacuerdo, Indiferente, Parcialmente de acuerdo, Totalmente de acuerdo</td>
+<td align="left">Ordinal (Likert)</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-Los textos y materiales en inglés fueron comprensibles en la mayoría de los cursos.
-</td>
-<td style="text-align:left;">
-Parcialmente en desacuerdo, Indiferente, Parcialmente de acuerdo, Totalmente de acuerdo
-</td>
-<td style="text-align:left;">
-Ordinal (Likert)
-</td>
+<tr class="odd">
+<td align="left">Los textos y materiales en inglés fueron comprensibles en la mayoría de los cursos.</td>
+<td align="left">Parcialmente en desacuerdo, Indiferente, Parcialmente de acuerdo, Totalmente de acuerdo</td>
+<td align="left">Ordinal (Likert)</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-Sentía que no era capaz de aprender bien debido a mis limitaciones en inglés.
-</td>
-<td style="text-align:left;">
-Totalmente en desacuerdo, Parcialmente en desacuerdo, Indiferente, Parcialmente de acuerdo, Totalmente de acuerdo
-</td>
-<td style="text-align:left;">
-Ordinal (Likert)
-</td>
+<tr class="even">
+<td align="left">Sentía que no era capaz de aprender bien debido a mis limitaciones en inglés.</td>
+<td align="left">Totalmente en desacuerdo, Parcialmente en desacuerdo, Indiferente, Parcialmente de acuerdo, Totalmente de acuerdo</td>
+<td align="left">Ordinal (Likert)</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-Me resultó fácil expresar mis ideas y opiniones en inglés durante las clases.
-</td>
-<td style="text-align:left;">
-Parcialmente en desacuerdo, Indiferente, Parcialmente de acuerdo, Totalmente de acuerdo
-</td>
-<td style="text-align:left;">
-Ordinal (Likert)
-</td>
+<tr class="odd">
+<td align="left">Me resultó fácil expresar mis ideas y opiniones en inglés durante las clases.</td>
+<td align="left">Parcialmente en desacuerdo, Indiferente, Parcialmente de acuerdo, Totalmente de acuerdo</td>
+<td align="left">Ordinal (Likert)</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-Mi nivel de participación en las clases dictadas en inglés es el mismo que cuando las clases son en español.
-</td>
-<td style="text-align:left;">
-Totalmente en desacuerdo, Parcialmente en desacuerdo, Indiferente, Parcialmente de acuerdo, Totalmente de acuerdo
-</td>
-<td style="text-align:left;">
-Ordinal (Likert)
-</td>
+<tr class="even">
+<td align="left">Mi nivel de participación en las clases dictadas en inglés es el mismo que cuando las clases son en español.</td>
+<td align="left">Totalmente en desacuerdo, Parcialmente en desacuerdo, Indiferente, Parcialmente de acuerdo, Totalmente de acuerdo</td>
+<td align="left">Ordinal (Likert)</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-Tuve dificultades para participar oralmente debido a mi nivel de idioma.
-</td>
-<td style="text-align:left;">
-Totalmente en desacuerdo, Parcialmente en desacuerdo, Indiferente, Parcialmente de acuerdo, Totalmente de acuerdo
-</td>
-<td style="text-align:left;">
-Ordinal (Likert)
-</td>
+<tr class="odd">
+<td align="left">Tuve dificultades para participar oralmente debido a mi nivel de idioma.</td>
+<td align="left">Totalmente en desacuerdo, Parcialmente en desacuerdo, Indiferente, Parcialmente de acuerdo, Totalmente de acuerdo</td>
+<td align="left">Ordinal (Likert)</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-Pude entender los conceptos clave de las asignaturas impartidas en inglés.
-</td>
-<td style="text-align:left;">
-Parcialmente en desacuerdo, Indiferente, Parcialmente de acuerdo, Totalmente de acuerdo
-</td>
-<td style="text-align:left;">
-Ordinal (Likert)
-</td>
+<tr class="even">
+<td align="left">Pude entender los conceptos clave de las asignaturas impartidas en inglés.</td>
+<td align="left">Parcialmente en desacuerdo, Indiferente, Parcialmente de acuerdo, Totalmente de acuerdo</td>
+<td align="left">Ordinal (Likert)</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-Mi conocimiento previo de la materia me ayudó a comprender las temáticas del curso impartido en inglés.
-</td>
-<td style="text-align:left;">
-Parcialmente en desacuerdo, Indiferente, Parcialmente de acuerdo, Totalmente de acuerdo
-</td>
-<td style="text-align:left;">
-Ordinal (Likert)
-</td>
+<tr class="odd">
+<td align="left">Mi conocimiento previo de la materia me ayudó a comprender las temáticas del curso impartido en inglés.</td>
+<td align="left">Parcialmente en desacuerdo, Indiferente, Parcialmente de acuerdo, Totalmente de acuerdo</td>
+<td align="left">Ordinal (Likert)</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-El inglés fue una barrera para demostrar mi conocimiento sobre los temas de la clase.
-</td>
-<td style="text-align:left;">
-Totalmente en desacuerdo, Parcialmente en desacuerdo, Indiferente, Parcialmente de acuerdo, Totalmente de acuerdo
-</td>
-<td style="text-align:left;">
-Ordinal (Likert)
-</td>
+<tr class="even">
+<td align="left">El inglés fue una barrera para demostrar mi conocimiento sobre los temas de la clase.</td>
+<td align="left">Totalmente en desacuerdo, Parcialmente en desacuerdo, Indiferente, Parcialmente de acuerdo, Totalmente de acuerdo</td>
+<td align="left">Ordinal (Likert)</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-Mi nivel de inglés me ayudó a tener un buen desempeño académico en las asignaturas.
-</td>
-<td style="text-align:left;">
-Parcialmente en desacuerdo, Indiferente, Parcialmente de acuerdo, Totalmente de acuerdo
-</td>
-<td style="text-align:left;">
-Ordinal (Likert)
-</td>
+<tr class="odd">
+<td align="left">Mi nivel de inglés me ayudó a tener un buen desempeño académico en las asignaturas.</td>
+<td align="left">Parcialmente en desacuerdo, Indiferente, Parcialmente de acuerdo, Totalmente de acuerdo</td>
+<td align="left">Ordinal (Likert)</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-Logré un buen desempeño académico en las asignaturas, a pesar de fueron dictadas en inglés.
-</td>
-<td style="text-align:left;">
-Parcialmente en desacuerdo, Indiferente, Parcialmente de acuerdo, Totalmente de acuerdo
-</td>
-<td style="text-align:left;">
-Ordinal (Likert)
-</td>
+<tr class="even">
+<td align="left">Logré un buen desempeño académico en las asignaturas, a pesar de fueron dictadas en inglés.</td>
+<td align="left">Parcialmente en desacuerdo, Indiferente, Parcialmente de acuerdo, Totalmente de acuerdo</td>
+<td align="left">Ordinal (Likert)</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-En mis cursos del programa en inglés, aprendí igual que en los cursos impartidos en español.
-</td>
-<td style="text-align:left;">
-Parcialmente en desacuerdo, Indiferente, Parcialmente de acuerdo, Totalmente de acuerdo
-</td>
-<td style="text-align:left;">
-Ordinal (Likert)
-</td>
+<tr class="odd">
+<td align="left">En mis cursos del programa en inglés, aprendí igual que en los cursos impartidos en español.</td>
+<td align="left">Parcialmente en desacuerdo, Indiferente, Parcialmente de acuerdo, Totalmente de acuerdo</td>
+<td align="left">Ordinal (Likert)</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-Los docentes tienen un nivel suficiente de inglés para dictar la clase en ese idioma.
-</td>
-<td style="text-align:left;">
-Parcialmente en desacuerdo, Indiferente, Parcialmente de acuerdo, Totalmente de acuerdo
-</td>
-<td style="text-align:left;">
-Ordinal (Likert)
-</td>
+<tr class="even">
+<td align="left">Los docentes tienen un nivel suficiente de inglés para dictar la clase en ese idioma.</td>
+<td align="left">Parcialmente en desacuerdo, Indiferente, Parcialmente de acuerdo, Totalmente de acuerdo</td>
+<td align="left">Ordinal (Likert)</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-Los materiales que usaron los profesores en las clases fueron adecuados para enseñar las temáticas del curso.
-</td>
-<td style="text-align:left;">
-Parcialmente en desacuerdo, Indiferente, Parcialmente de acuerdo, Totalmente de acuerdo
-</td>
-<td style="text-align:left;">
-Ordinal (Likert)
-</td>
+<tr class="odd">
+<td align="left">Los materiales que usaron los profesores en las clases fueron adecuados para enseñar las temáticas del curso.</td>
+<td align="left">Parcialmente en desacuerdo, Indiferente, Parcialmente de acuerdo, Totalmente de acuerdo</td>
+<td align="left">Ordinal (Likert)</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-Las evaluaciones me permitieron demostrar mis conocimientos independientemente de mi nivel de inglés.
-</td>
-<td style="text-align:left;">
-Parcialmente en desacuerdo, Indiferente, Parcialmente de acuerdo, Totalmente de acuerdo
-</td>
-<td style="text-align:left;">
-Ordinal (Likert)
-</td>
+<tr class="even">
+<td align="left">Las evaluaciones me permitieron demostrar mis conocimientos independientemente de mi nivel de inglés.</td>
+<td align="left">Parcialmente en desacuerdo, Indiferente, Parcialmente de acuerdo, Totalmente de acuerdo</td>
+<td align="left">Ordinal (Likert)</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-Las actividades usadas por el profesor en las clases dictadas en inglés facilitaron el aprendizaje de las temáticas del curso.
-</td>
-<td style="text-align:left;">
-Parcialmente en desacuerdo, Indiferente, Parcialmente de acuerdo, Totalmente de acuerdo
-</td>
-<td style="text-align:left;">
-Ordinal (Likert)
-</td>
+<tr class="odd">
+<td align="left">Las actividades usadas por el profesor en las clases dictadas en inglés facilitaron el aprendizaje de las temáticas del curso.</td>
+<td align="left">Parcialmente en desacuerdo, Indiferente, Parcialmente de acuerdo, Totalmente de acuerdo</td>
+<td align="left">Ordinal (Likert)</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-Utilicé los recursos de apoyo (centro de apoyo a los estudiantes, centros de escritura) que ofrece la universidad para comprender mejor las temáticas de los cursos.
-</td>
-<td style="text-align:left;">
-Totalmente en desacuerdo, Parcialmente en desacuerdo, Indiferente, Parcialmente de acuerdo, Totalmente de acuerdo
-</td>
-<td style="text-align:left;">
-Ordinal (Likert)
-</td>
+<tr class="even">
+<td align="left">Utilicé los recursos de apoyo (centro de apoyo a los estudiantes, centros de escritura) que ofrece la universidad para comprender mejor las temáticas de los cursos.</td>
+<td align="left">Totalmente en desacuerdo, Parcialmente en desacuerdo, Indiferente, Parcialmente de acuerdo, Totalmente de acuerdo</td>
+<td align="left">Ordinal (Likert)</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-Tuve la necesidad de prepararme más para los cursos dictados en inglés que para los que son en mi lengua.
-</td>
-<td style="text-align:left;">
-Totalmente en desacuerdo, Parcialmente en desacuerdo, Indiferente, Parcialmente de acuerdo, Totalmente de acuerdo
-</td>
-<td style="text-align:left;">
-Ordinal (Likert)
-</td>
+<tr class="odd">
+<td align="left">Tuve la necesidad de prepararme más para los cursos dictados en inglés que para los que son en mi lengua.</td>
+<td align="left">Totalmente en desacuerdo, Parcialmente en desacuerdo, Indiferente, Parcialmente de acuerdo, Totalmente de acuerdo</td>
+<td align="left">Ordinal (Likert)</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-Me sentí cómodo/a porque entendí las temáticas de las clases en inglés.
-</td>
-<td style="text-align:left;">
-Totalmente en desacuerdo, Parcialmente en desacuerdo, Indiferente, Parcialmente de acuerdo, Totalmente de acuerdo
-</td>
-<td style="text-align:left;">
-Ordinal (Likert)
-</td>
+<tr class="even">
+<td align="left">Me sentí cómodo/a porque entendí las temáticas de las clases en inglés.</td>
+<td align="left">Totalmente en desacuerdo, Parcialmente en desacuerdo, Indiferente, Parcialmente de acuerdo, Totalmente de acuerdo</td>
+<td align="left">Ordinal (Likert)</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-Tomar asignaturas de mi programa en inglés me generó cansancio mental.
-</td>
-<td style="text-align:left;">
-Totalmente en desacuerdo, Parcialmente en desacuerdo, Indiferente, Parcialmente de acuerdo, Totalmente de acuerdo
-</td>
-<td style="text-align:left;">
-Ordinal (Likert)
-</td>
+<tr class="odd">
+<td align="left">Tomar asignaturas de mi programa en inglés me generó cansancio mental.</td>
+<td align="left">Totalmente en desacuerdo, Parcialmente en desacuerdo, Indiferente, Parcialmente de acuerdo, Totalmente de acuerdo</td>
+<td align="left">Ordinal (Likert)</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-Creo que los cursos dictados en inglés me van a preparar para mi futuro.
-</td>
-<td style="text-align:left;">
-Parcialmente en desacuerdo, Indiferente, Parcialmente de acuerdo, Totalmente de acuerdo
-</td>
-<td style="text-align:left;">
-Ordinal (Likert)
-</td>
+<tr class="even">
+<td align="left">Creo que los cursos dictados en inglés me van a preparar para mi futuro.</td>
+<td align="left">Parcialmente en desacuerdo, Indiferente, Parcialmente de acuerdo, Totalmente de acuerdo</td>
+<td align="left">Ordinal (Likert)</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-Estaría dispuesto/a a seguir tomando cursos del programa dictados en inglés.
-</td>
-<td style="text-align:left;">
-Parcialmente en desacuerdo, Indiferente, Parcialmente de acuerdo, Totalmente de acuerdo
-</td>
-<td style="text-align:left;">
-Ordinal (Likert)
-</td>
+<tr class="odd">
+<td align="left">Estaría dispuesto/a a seguir tomando cursos del programa dictados en inglés.</td>
+<td align="left">Parcialmente en desacuerdo, Indiferente, Parcialmente de acuerdo, Totalmente de acuerdo</td>
+<td align="left">Ordinal (Likert)</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-Recomendaría a otros estudiantes tomar cursos del programa dictados en inglés.
-</td>
-<td style="text-align:left;">
-Parcialmente en desacuerdo, Indiferente, Parcialmente de acuerdo, Totalmente de acuerdo
-</td>
-<td style="text-align:left;">
-Ordinal (Likert)
-</td>
+<tr class="even">
+<td align="left">Recomendaría a otros estudiantes tomar cursos del programa dictados en inglés.</td>
+<td align="left">Parcialmente en desacuerdo, Indiferente, Parcialmente de acuerdo, Totalmente de acuerdo</td>
+<td align="left">Ordinal (Likert)</td>
 </tr>
 </tbody>
 </table>
 <p>Para no tener que escribir el texto completo de la pregunta, vamos a renombrar las variables</p>
-<table class="table" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
-<caption>
-(#tab:preguntas_p)Mapa EMI (Likert): P1–P24
-</caption>
+<table>
+<caption>(#tab:preguntas_p)Mapa EMI (Likert): P1–P24</caption>
+<colgroup>
+<col width="3%" />
+<col width="96%" />
+</colgroup>
 <thead>
-<tr>
-<th style="text-align:left;">
-Nueva
-</th>
-<th style="text-align:left;">
-Original
-</th>
+<tr class="header">
+<th align="left">Nueva</th>
+<th align="left">Original</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:left;">
-P1
-</td>
-<td style="text-align:left;">
-En general, comprendí las explicaciones en inglés dadas por los profesores.
-</td>
+<tr class="odd">
+<td align="left">P1</td>
+<td align="left">En general, comprendí las explicaciones en inglés dadas por los profesores.</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-P2
-</td>
-<td style="text-align:left;">
-Leer textos académicos en inglés fue un reto que dificultó mi comprensión de las temáticas del curso.
-</td>
+<tr class="even">
+<td align="left">P2</td>
+<td align="left">Leer textos académicos en inglés fue un reto que dificultó mi comprensión de las temáticas del curso.</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-P3
-</td>
-<td style="text-align:left;">
-Los textos y materiales en inglés fueron comprensibles en la mayoría de los cursos.
-</td>
+<tr class="odd">
+<td align="left">P3</td>
+<td align="left">Los textos y materiales en inglés fueron comprensibles en la mayoría de los cursos.</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-P4
-</td>
-<td style="text-align:left;">
-Sentía que no era capaz de aprender bien debido a mis limitaciones en inglés.
-</td>
+<tr class="even">
+<td align="left">P4</td>
+<td align="left">Sentía que no era capaz de aprender bien debido a mis limitaciones en inglés.</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-P5
-</td>
-<td style="text-align:left;">
-Me resultó fácil expresar mis ideas y opiniones en inglés durante las clases.
-</td>
+<tr class="odd">
+<td align="left">P5</td>
+<td align="left">Me resultó fácil expresar mis ideas y opiniones en inglés durante las clases.</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-P6
-</td>
-<td style="text-align:left;">
-Mi nivel de participación en las clases dictadas en inglés es el mismo que cuando las clases son en español.
-</td>
+<tr class="even">
+<td align="left">P6</td>
+<td align="left">Mi nivel de participación en las clases dictadas en inglés es el mismo que cuando las clases son en español.</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-P7
-</td>
-<td style="text-align:left;">
-Tuve dificultades para participar oralmente debido a mi nivel de idioma.
-</td>
+<tr class="odd">
+<td align="left">P7</td>
+<td align="left">Tuve dificultades para participar oralmente debido a mi nivel de idioma.</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-P8
-</td>
-<td style="text-align:left;">
-Pude entender los conceptos clave de las asignaturas impartidas en inglés.
-</td>
+<tr class="even">
+<td align="left">P8</td>
+<td align="left">Pude entender los conceptos clave de las asignaturas impartidas en inglés.</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-P9
-</td>
-<td style="text-align:left;">
-Mi conocimiento previo de la materia me ayudó a comprender las temáticas del curso impartido en inglés.
-</td>
+<tr class="odd">
+<td align="left">P9</td>
+<td align="left">Mi conocimiento previo de la materia me ayudó a comprender las temáticas del curso impartido en inglés.</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-P10
-</td>
-<td style="text-align:left;">
-El inglés fue una barrera para demostrar mi conocimiento sobre los temas de la clase.
-</td>
+<tr class="even">
+<td align="left">P10</td>
+<td align="left">El inglés fue una barrera para demostrar mi conocimiento sobre los temas de la clase.</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-P11
-</td>
-<td style="text-align:left;">
-Mi nivel de inglés me ayudó a tener un buen desempeño académico en las asignaturas.
-</td>
+<tr class="odd">
+<td align="left">P11</td>
+<td align="left">Mi nivel de inglés me ayudó a tener un buen desempeño académico en las asignaturas.</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-P12
-</td>
-<td style="text-align:left;">
-Logré un buen desempeño académico en las asignaturas, a pesar de fueron dictadas en inglés.
-</td>
+<tr class="even">
+<td align="left">P12</td>
+<td align="left">Logré un buen desempeño académico en las asignaturas, a pesar de fueron dictadas en inglés.</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-P13
-</td>
-<td style="text-align:left;">
-En mis cursos del programa en inglés, aprendí igual que en los cursos impartidos en español.
-</td>
+<tr class="odd">
+<td align="left">P13</td>
+<td align="left">En mis cursos del programa en inglés, aprendí igual que en los cursos impartidos en español.</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-P14
-</td>
-<td style="text-align:left;">
-Los docentes tienen un nivel suficiente de inglés para dictar la clase en ese idioma.
-</td>
+<tr class="even">
+<td align="left">P14</td>
+<td align="left">Los docentes tienen un nivel suficiente de inglés para dictar la clase en ese idioma.</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-P15
-</td>
-<td style="text-align:left;">
-Los materiales que usaron los profesores en las clases fueron adecuados para enseñar las temáticas del curso.
-</td>
+<tr class="odd">
+<td align="left">P15</td>
+<td align="left">Los materiales que usaron los profesores en las clases fueron adecuados para enseñar las temáticas del curso.</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-P16
-</td>
-<td style="text-align:left;">
-Las evaluaciones me permitieron demostrar mis conocimientos independientemente de mi nivel de inglés.
-</td>
+<tr class="even">
+<td align="left">P16</td>
+<td align="left">Las evaluaciones me permitieron demostrar mis conocimientos independientemente de mi nivel de inglés.</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-P17
-</td>
-<td style="text-align:left;">
-Las actividades usadas por el profesor en las clases dictadas en inglés facilitaron el aprendizaje de las temáticas del curso.
-</td>
+<tr class="odd">
+<td align="left">P17</td>
+<td align="left">Las actividades usadas por el profesor en las clases dictadas en inglés facilitaron el aprendizaje de las temáticas del curso.</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-P18
-</td>
-<td style="text-align:left;">
-Utilicé los recursos de apoyo (centro de apoyo a los estudiantes, centros de escritura) que ofrece la universidad para comprender mejor las temáticas de los cursos.
-</td>
+<tr class="even">
+<td align="left">P18</td>
+<td align="left">Utilicé los recursos de apoyo (centro de apoyo a los estudiantes, centros de escritura) que ofrece la universidad para comprender mejor las temáticas de los cursos.</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-P19
-</td>
-<td style="text-align:left;">
-Tuve la necesidad de prepararme más para los cursos dictados en inglés que para los que son en mi lengua.
-</td>
+<tr class="odd">
+<td align="left">P19</td>
+<td align="left">Tuve la necesidad de prepararme más para los cursos dictados en inglés que para los que son en mi lengua.</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-P20
-</td>
-<td style="text-align:left;">
-Me sentí cómodo/a porque entendí las temáticas de las clases en inglés.
-</td>
+<tr class="even">
+<td align="left">P20</td>
+<td align="left">Me sentí cómodo/a porque entendí las temáticas de las clases en inglés.</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-P21
-</td>
-<td style="text-align:left;">
-Tomar asignaturas de mi programa en inglés me generó cansancio mental.
-</td>
+<tr class="odd">
+<td align="left">P21</td>
+<td align="left">Tomar asignaturas de mi programa en inglés me generó cansancio mental.</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-P22
-</td>
-<td style="text-align:left;">
-Creo que los cursos dictados en inglés me van a preparar para mi futuro.
-</td>
+<tr class="even">
+<td align="left">P22</td>
+<td align="left">Creo que los cursos dictados en inglés me van a preparar para mi futuro.</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-P23
-</td>
-<td style="text-align:left;">
-Estaría dispuesto/a a seguir tomando cursos del programa dictados en inglés.
-</td>
+<tr class="odd">
+<td align="left">P23</td>
+<td align="left">Estaría dispuesto/a a seguir tomando cursos del programa dictados en inglés.</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-P24
-</td>
-<td style="text-align:left;">
-Recomendaría a otros estudiantes tomar cursos del programa dictados en inglés.
-</td>
+<tr class="even">
+<td align="left">P24</td>
+<td align="left">Recomendaría a otros estudiantes tomar cursos del programa dictados en inglés.</td>
 </tr>
 </tbody>
 </table>
@@ -862,212 +512,117 @@ Recomendaría a otros estudiantes tomar cursos del programa dictados en inglés.
 <div id="variables-adicionales" class="section level2 hasAnchor" number="2.5">
 <h2><span class="header-section-number">2.5</span> Variables adicionales<a href="oper.html#variables-adicionales" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Así, estas variables complementarias tienen la ventaja de recopilar información que queda mal capturada con escalas tipo Likert, ya que se concentran en ciertos tipos de comportamientos y experiencias en cursos impartidos en inglés. Notablemente, las preguntas de opción múltiple nos guían para determinar qué estrategias implementan los estudiantes para manejar problemas (por ejemplo, depender de recursos, materiales alternativos o trabajo colaborativo) y qué emociones o experiencias se manifiestan en el aula (por ejemplo, ansiedad, motivación o frustración). Al mismo tiempo, la pregunta abierta introduce dimensiones cualitativas que ayudan a explorar los tipos de obstáculos enfrentados: permite más comprensión de los hallazgos cuantitativos y sugiere mejoras específicas para el diseño del curso y el apoyo.</p>
-<table class="table" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
-<caption>
-(#tab:var_opc)Variables adicionales: multirrespuesta y preguntas abiertas
-</caption>
+<table>
+<caption>(#tab:var_opc)Variables adicionales: multirrespuesta y preguntas abiertas</caption>
+<colgroup>
+<col width="39%" />
+<col width="50%" />
+<col width="10%" />
+</colgroup>
 <thead>
-<tr>
-<th style="text-align:left;">
-Variable
-</th>
-<th style="text-align:left;">
-Categorias_observadas
-</th>
-<th style="text-align:left;">
-Nivel_Medicion
-</th>
+<tr class="header">
+<th align="left">Variable</th>
+<th align="left">Categorias_observadas</th>
+<th align="left">Nivel_Medicion</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:left;">
-Después de haber tomado asignaturas en inglés, mejoré en:
-</td>
-<td style="text-align:left;">
-mi comprensión auditiva; mi comprensión de lectura; mi expresión oral; mi expresión escrita; mi uso de vocabulario general; mi conocimiento de vocabulario técnico
-</td>
-<td style="text-align:left;">
-Nominal (multirrespuesta)
-</td>
+<tr class="odd">
+<td align="left">Después de haber tomado asignaturas en inglés, mejoré en:</td>
+<td align="left">mi comprensión auditiva; mi comprensión de lectura; mi expresión oral; mi expresión escrita; mi uso de vocabulario general; mi conocimiento de vocabulario técnico</td>
+<td align="left">Nominal (multirrespuesta)</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-Cuando encontré dificultades en la clase, (escoger una o varias)
-</td>
-<td style="text-align:left;">
-consulté materiales en español; formé grupos de estudio; usé traductores; usé apps de IA; Otra
-</td>
-<td style="text-align:left;">
-Nominal (multirrespuesta)
-</td>
+<tr class="even">
+<td align="left">Cuando encontré dificultades en la clase, (escoger una o varias)</td>
+<td align="left">consulté materiales en español; formé grupos de estudio; usé traductores; usé apps de IA; Otra</td>
+<td align="left">Nominal (multirrespuesta)</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-Durante la(s) clases en inglés del programa experimenté…
-</td>
-<td style="text-align:left;">
-ansiedad; comodidad; frustración; indiferencia; interés; motivación; un reto; otro
-</td>
-<td style="text-align:left;">
-Nominal (multirrespuesta)
-</td>
+<tr class="odd">
+<td align="left">Durante la(s) clases en inglés del programa experimenté…</td>
+<td align="left">ansiedad; comodidad; frustración; indiferencia; interés; motivación; un reto; otro</td>
+<td align="left">Nominal (multirrespuesta)</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-¿Qué beneficios obtuviste al cursar asignaturas del programa dictadas en inglés?
-</td>
-<td style="text-align:left;">
-Respuesta abierta (texto libre)
-</td>
-<td style="text-align:left;">
-Cualitativa (respuesta abierta)
-</td>
+<tr class="even">
+<td align="left">¿Qué beneficios obtuviste al cursar asignaturas del programa dictadas en inglés?</td>
+<td align="left">Respuesta abierta (texto libre)</td>
+<td align="left">Cualitativa (respuesta abierta)</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-¿Qué dificultades experimentaste a lo largo de los diferentes cursos dictados en inglés?
-</td>
-<td style="text-align:left;">
-Respuesta abierta (texto libre)
-</td>
-<td style="text-align:left;">
-Cualitativa (respuesta abierta)
-</td>
+<tr class="odd">
+<td align="left">¿Qué dificultades experimentaste a lo largo de los diferentes cursos dictados en inglés?</td>
+<td align="left">Respuesta abierta (texto libre)</td>
+<td align="left">Cualitativa (respuesta abierta)</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-¿Qué recomendaciones darías para mejorar la calidad de los cursos dictados en inglés?
-</td>
-<td style="text-align:left;">
-Respuesta abierta (texto libre)
-</td>
-<td style="text-align:left;">
-Cualitativa (respuesta abierta)
-</td>
+<tr class="even">
+<td align="left">¿Qué recomendaciones darías para mejorar la calidad de los cursos dictados en inglés?</td>
+<td align="left">Respuesta abierta (texto libre)</td>
+<td align="left">Cualitativa (respuesta abierta)</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-¿De qué manera influyó el uso del inglés en tu aprendizaje del contenido de las asignaturas?
-</td>
-<td style="text-align:left;">
-Respuesta abierta (texto libre)
-</td>
-<td style="text-align:left;">
-Cualitativa (respuesta abierta)
-</td>
+<tr class="odd">
+<td align="left">¿De qué manera influyó el uso del inglés en tu aprendizaje del contenido de las asignaturas?</td>
+<td align="left">Respuesta abierta (texto libre)</td>
+<td align="left">Cualitativa (respuesta abierta)</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-De los cursos dictados en inglés que tomaste, ¿qué estrategias que usó el profesor facilitaron tu aprendizaje? Descríbelas.
-</td>
-<td style="text-align:left;">
-Respuesta abierta (texto libre)
-</td>
-<td style="text-align:left;">
-Cualitativa (respuesta abierta)
-</td>
+<tr class="even">
+<td align="left">De los cursos dictados en inglés que tomaste, ¿qué estrategias que usó el profesor facilitaron tu aprendizaje? Descríbelas.</td>
+<td align="left">Respuesta abierta (texto libre)</td>
+<td align="left">Cualitativa (respuesta abierta)</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-De los cursos dictados en inglés que tomaste, ¿qué estrategias que usó el profesor dificultaron tu aprendizaje? Descríbelas.
-</td>
-<td style="text-align:left;">
-Respuesta abierta (texto libre)
-</td>
-<td style="text-align:left;">
-Cualitativa (respuesta abierta)
-</td>
+<tr class="odd">
+<td align="left">De los cursos dictados en inglés que tomaste, ¿qué estrategias que usó el profesor dificultaron tu aprendizaje? Descríbelas.</td>
+<td align="left">Respuesta abierta (texto libre)</td>
+<td align="left">Cualitativa (respuesta abierta)</td>
 </tr>
 </tbody>
 </table>
 <p>De manera similar lo realizaremos las variables opcionales</p>
-<table class="table" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
-<caption>
-(#tab:preguntas_q)Variables Q (Q1–Q9)
-</caption>
+<table>
+<caption>(#tab:preguntas_q)Variables Q (Q1–Q9)</caption>
+<colgroup>
+<col width="4%" />
+<col width="95%" />
+</colgroup>
 <thead>
-<tr>
-<th style="text-align:left;">
-Nueva
-</th>
-<th style="text-align:left;">
-Original
-</th>
+<tr class="header">
+<th align="left">Nueva</th>
+<th align="left">Original</th>
 </tr>
 </thead>
 <tbody>
-<tr>
-<td style="text-align:left;">
-Q1
-</td>
-<td style="text-align:left;">
-Después de haber tomado asignaturas en inglés, mejoré en:
-</td>
+<tr class="odd">
+<td align="left">Q1</td>
+<td align="left">Después de haber tomado asignaturas en inglés, mejoré en:</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-Q2
-</td>
-<td style="text-align:left;">
-Cuando encontré dificultades en la clase, (escoger una o varias)
-</td>
+<tr class="even">
+<td align="left">Q2</td>
+<td align="left">Cuando encontré dificultades en la clase, (escoger una o varias)</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-Q3
-</td>
-<td style="text-align:left;">
-Durante la(s) clases en inglés del programa experimenté…
-</td>
+<tr class="odd">
+<td align="left">Q3</td>
+<td align="left">Durante la(s) clases en inglés del programa experimenté…</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-Q4
-</td>
-<td style="text-align:left;">
-¿Qué beneficios obtuviste al cursar asignaturas del programa dictadas en inglés?
-</td>
+<tr class="even">
+<td align="left">Q4</td>
+<td align="left">¿Qué beneficios obtuviste al cursar asignaturas del programa dictadas en inglés?</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-Q5
-</td>
-<td style="text-align:left;">
-¿Qué dificultades experimentaste a lo largo de los diferentes cursos dictados en inglés?
-</td>
+<tr class="odd">
+<td align="left">Q5</td>
+<td align="left">¿Qué dificultades experimentaste a lo largo de los diferentes cursos dictados en inglés?</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-Q6
-</td>
-<td style="text-align:left;">
-¿Qué recomendaciones darías para mejorar la calidad de los cursos dictados en inglés?
-</td>
+<tr class="even">
+<td align="left">Q6</td>
+<td align="left">¿Qué recomendaciones darías para mejorar la calidad de los cursos dictados en inglés?</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-Q7
-</td>
-<td style="text-align:left;">
-¿De qué manera influyó el uso del inglés en tu aprendizaje del contenido de las asignaturas?
-</td>
+<tr class="odd">
+<td align="left">Q7</td>
+<td align="left">¿De qué manera influyó el uso del inglés en tu aprendizaje del contenido de las asignaturas?</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-Q8
-</td>
-<td style="text-align:left;">
-De los cursos dictados en inglés que tomaste, ¿qué estrategias que usó el profesor facilitaron tu aprendizaje? Descríbelas.
-</td>
+<tr class="even">
+<td align="left">Q8</td>
+<td align="left">De los cursos dictados en inglés que tomaste, ¿qué estrategias que usó el profesor facilitaron tu aprendizaje? Descríbelas.</td>
 </tr>
-<tr>
-<td style="text-align:left;">
-Q9
-</td>
-<td style="text-align:left;">
-De los cursos dictados en inglés que tomaste, ¿qué estrategias que usó el profesor dificultaron tu aprendizaje? Descríbelas.
-</td>
+<tr class="odd">
+<td align="left">Q9</td>
+<td align="left">De los cursos dictados en inglés que tomaste, ¿qué estrategias que usó el profesor dificultaron tu aprendizaje? Descríbelas.</td>
 </tr>
 </tbody>
 </table>
@@ -1134,6 +689,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>
