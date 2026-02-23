@@ -89,6 +89,7 @@
 <li class="chapter" data-level="3" data-path="eda.html"><a href="eda.html"><i class="fa fa-check"></i><b>3</b> Análisis exploratorio</a>
 <ul>
 <li class="chapter" data-level="3.1" data-path="02-eda.html"><a href="#an%C3%A1lisis-de-las-variables-sociodemogr%C3%A1ficas"><i class="fa fa-check"></i><b>3.1</b> Análisis de las variables sociodemográficas</a></li>
+<li class="chapter" data-level="3.2" data-path="02-eda.html"><a href="#an%C3%A1lisis-de-las-variables-de-antecedentes-educativos"><i class="fa fa-check"></i><b>3.2</b> Análisis de las variables de antecedentes educativos</a></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i>Referencias</a></li>
 <li class="divider"></li>
@@ -145,12 +146,6 @@
 <p>En este estudio se recolectaron datos mediante un cuestionario en línea para caracterizar a los participantes y contextualizar los análisis posteriores. Un total de 273 estudiantes completó el cuestionario. Para el análisis descriptivo de la edad, se excluyeron 3 registros por datos faltantes, por lo que se contó con 270 estudiantes. La edad de los participantes presentó un promedio de 22.81 años (DE = 1.36 años), donde el <span class="math inline">\(50\%\)</span> de los participates tiene edad menor o igual 23 años. Además, las edades oscilaron entre 20 y 28 años (ver <code>Tabla \@ref(tab:edad_num)</code>).</p>
 <table>
 <caption>(#tab:vars_cat_falt)Resumen general (n válidos, faltantes y % faltantes)</caption>
-<colgroup>
-<col width="64%" />
-<col width="5%" />
-<col width="12%" />
-<col width="17%" />
-</colgroup>
 <thead>
 <tr class="header">
 <th align="left">Variable</th>
@@ -173,18 +168,6 @@
 <td align="right">0</td>
 </tr>
 <tr class="odd">
-<td align="left">Tipo de colegio</td>
-<td align="right">273</td>
-<td align="right">0</td>
-<td align="right">0</td>
-</tr>
-<tr class="even">
-<td align="left">El colegio donde cursó su bachillerato es bilingüe</td>
-<td align="right">273</td>
-<td align="right">0</td>
-<td align="right">0</td>
-</tr>
-<tr class="odd">
 <td align="left">Programa</td>
 <td align="right">273</td>
 <td align="right">0</td>
@@ -198,15 +181,9 @@
 </tr>
 </tbody>
 </table>
-<p>En relación con la calidad de los datos para las variables sociodemográficas analizadas (Género, Estrato socioeconómico, Tipo de colegio, colegio bilingüe y Semestre actual), no se identificaron valores faltantes (0 casos; 0% de datos perdidos). Esto evidencia una completitud total en estas variables, lo que permite realizar los análisis descriptivos posteriores sin necesidad de imputación o exclusión de casos por ausencia de información.</p>
-<table style="width:100%;">
+<p>En relación con la calidad de los datos para las variables sociodemográficas analizadas (Género, Estrato socioeconómico, y Semestre actual), no se identificaron valores faltantes (0 casos; 0% de datos perdidos). Esto evidencia una completitud total en estas variables, lo que permite realizar los análisis descriptivos posteriores sin necesidad de imputación o exclusión de casos por ausencia de información.</p>
+<table>
 <caption>(#tab:socio_demo)Distribución de variables sociodemográficas (conteo y porcentaje)</caption>
-<colgroup>
-<col width="54%" />
-<col width="29%" />
-<col width="4%" />
-<col width="11%" />
-</colgroup>
 <thead>
 <tr class="header">
 <th align="left">Variable</th>
@@ -265,30 +242,6 @@
 <td align="right">18.32</td>
 </tr>
 <tr class="odd">
-<td align="left">Tipo de colegio</td>
-<td align="left">Privado</td>
-<td align="right">223</td>
-<td align="right">81.68</td>
-</tr>
-<tr class="even">
-<td align="left">Tipo de colegio</td>
-<td align="left">Público</td>
-<td align="right">50</td>
-<td align="right">18.32</td>
-</tr>
-<tr class="odd">
-<td align="left">El colegio donde cursó su bachillerato es bilingüe</td>
-<td align="left">Sí</td>
-<td align="right">146</td>
-<td align="right">53.48</td>
-</tr>
-<tr class="even">
-<td align="left">El colegio donde cursó su bachillerato es bilingüe</td>
-<td align="left">No</td>
-<td align="right">127</td>
-<td align="right">46.52</td>
-</tr>
-<tr class="odd">
 <td align="left">Programa</td>
 <td align="left">Administración de Empresas</td>
 <td align="right">158</td>
@@ -332,7 +285,163 @@
 </tr>
 </tbody>
 </table>
-<p>Los participantes fueron estudiantes de pregrado matriculados en tres programas académicos: Administración de Empresas (158; 57.88%), Negocios Internacionales (79; 28.94%) y Contaduría Pública (36; 13.19%). El semestre cursado osciló entre séptimo y décimo, con una mayor proporción de estudiantes en décimo semestre (104; 38.1%) y octavo semestre (92; 33.7%). En cuanto al género, 132 (48.35%) participantes se identificaron como femenino y 141 (51.65%) como masculino. La mayoría de los estudiantes provenía de colegios privados (223; 81.68%) y 146 reportó haber cursado el bachillerato en un colegio bilingüe (53.48%). En términos socioeconómicos, la distribución se concentró en los estratos 4 (67; 24.54%) y 3 (59; 21.61%), seguidos por los estratos 6, 5, 2 y 1 (ver <code>Tabla \@ref(tab:socio_demo)</code>).</p>
+<p>Los participantes fueron estudiantes de pregrado matriculados en tres programas académicos: Administración de Empresas (158; 57.88%), Negocios Internacionales (79; 28.94%) y Contaduría Pública (36; 13.19%). El semestre cursado osciló entre séptimo y décimo, con una mayor proporción de estudiantes en décimo semestre (104; 38.1%) y octavo semestre (92; 33.7%). En cuanto al género, 132 (48.35%) participantes se identificaron como femenino y 141 (51.65%) como masculino. En términos socioeconómicos, la distribución se concentró en los estratos 4 (67; 24.54%) y 3 (59; 21.61%), seguidos por los estratos 6, 5, 2 y 1 (ver <code>Tabla \@ref(tab:socio_demo)</code>).</p>
+<p><img src="bookdown-demo_files/figure-html/graf_socio_demo_1-1.png" width="672" /></p>
+<p>Cabe resaltar que las conclusiones serán parecedas o las mismas que las de la tabla.</p>
+</div>
+<div id="análisis-de-las-variables-de-antecedentes-educativos" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> Análisis de las variables de antecedentes educativos<a href="#an%C3%A1lisis-de-las-variables-de-antecedentes-educativos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Ahora, veamos el análisis de las variables de antecedentes educativos.</p>
+<table>
+<caption>(#tab:ant_educ)Calidad de datos: variables de antecedentes educativos</caption>
+<colgroup>
+<col width="64%" />
+<col width="5%" />
+<col width="12%" />
+<col width="17%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Variable</th>
+<th align="right">n</th>
+<th align="right">faltantes</th>
+<th align="right">pct_faltantes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Tipo de colegio</td>
+<td align="right">273</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr class="even">
+<td align="left">El colegio donde cursó su bachillerato es bilingüe</td>
+<td align="right">273</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr class="odd">
+<td align="left">Nivel máximo de escolaridad de madre</td>
+<td align="right">273</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+<tr class="even">
+<td align="left">Nivel máximo de escolaridad de padre</td>
+<td align="right">273</td>
+<td align="right">0</td>
+<td align="right">0</td>
+</tr>
+</tbody>
+</table>
+<p>En relación con la calidad de los datos para las variables de antecedentes educativos, no se identificaron valores faltantes (0 casos; 0% de datos perdidos). Esto demuestra una completitud de los datos, lo que permite realizar los análisis sin necesidad de imputación o exclusión de casos por ausencia de información.</p>
+<table>
+<caption>(#tab:tabla_ant_educ)Distribución de variables de antecedentes educativos (n y %)</caption>
+<colgroup>
+<col width="60%" />
+<col width="21%" />
+<col width="4%" />
+<col width="13%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Variable</th>
+<th align="left">Categoría</th>
+<th align="right">n</th>
+<th align="right">porcentaje</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Tipo de colegio</td>
+<td align="left">Privado</td>
+<td align="right">223</td>
+<td align="right">81.68</td>
+</tr>
+<tr class="even">
+<td align="left">Tipo de colegio</td>
+<td align="left">Público</td>
+<td align="right">50</td>
+<td align="right">18.32</td>
+</tr>
+<tr class="odd">
+<td align="left">El colegio donde cursó su bachillerato es bilingüe</td>
+<td align="left">Sí</td>
+<td align="right">146</td>
+<td align="right">53.48</td>
+</tr>
+<tr class="even">
+<td align="left">El colegio donde cursó su bachillerato es bilingüe</td>
+<td align="left">No</td>
+<td align="right">127</td>
+<td align="right">46.52</td>
+</tr>
+<tr class="odd">
+<td align="left">Nivel máximo de escolaridad de madre</td>
+<td align="left">Pregrado</td>
+<td align="right">106</td>
+<td align="right">38.83</td>
+</tr>
+<tr class="even">
+<td align="left">Nivel máximo de escolaridad de madre</td>
+<td align="left">Posgrado</td>
+<td align="right">86</td>
+<td align="right">31.50</td>
+</tr>
+<tr class="odd">
+<td align="left">Nivel máximo de escolaridad de madre</td>
+<td align="left">Bachillerato</td>
+<td align="right">45</td>
+<td align="right">16.48</td>
+</tr>
+<tr class="even">
+<td align="left">Nivel máximo de escolaridad de madre</td>
+<td align="left">Técnico/Tecnólogo</td>
+<td align="right">31</td>
+<td align="right">11.36</td>
+</tr>
+<tr class="odd">
+<td align="left">Nivel máximo de escolaridad de madre</td>
+<td align="left">Primaria</td>
+<td align="right">5</td>
+<td align="right">1.83</td>
+</tr>
+<tr class="even">
+<td align="left">Nivel máximo de escolaridad de padre</td>
+<td align="left">Posgrado</td>
+<td align="right">94</td>
+<td align="right">34.43</td>
+</tr>
+<tr class="odd">
+<td align="left">Nivel máximo de escolaridad de padre</td>
+<td align="left">Pregrado</td>
+<td align="right">89</td>
+<td align="right">32.60</td>
+</tr>
+<tr class="even">
+<td align="left">Nivel máximo de escolaridad de padre</td>
+<td align="left">Bachillerato</td>
+<td align="right">50</td>
+<td align="right">18.32</td>
+</tr>
+<tr class="odd">
+<td align="left">Nivel máximo de escolaridad de padre</td>
+<td align="left">Técnico/Tecnólogo</td>
+<td align="right">31</td>
+<td align="right">11.36</td>
+</tr>
+<tr class="even">
+<td align="left">Nivel máximo de escolaridad de padre</td>
+<td align="left">Primaria</td>
+<td align="right">9</td>
+<td align="right">3.30</td>
+</tr>
+</tbody>
+</table>
+<p>La mayoría de los estudiantes provenía de colegios privados (223; 81.68%) y 146 reportó haber cursado el bachillerato en un colegio bilingüe (53.48%). En cuanto al capital educativo del hogar, la escolaridad máxima reportada para la madre se concentró en Pregrado (106; 38.83%), mientras que para el padre predominó Posgrado (94; 34.43%) (Ver <code>Tabla @ref(tab:tabla_ant_educ)</code>).</p>
+<p><img src="bookdown-demo_files/figure-html/graf_ant_educ-1.png" width="672" /></p>
+<p>Las interpretaciones son similares a las de la tabla.</p>
 
 </div>
 </div>
