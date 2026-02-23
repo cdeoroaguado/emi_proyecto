@@ -52,6 +52,10 @@
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+<script src="libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
+<link href="libs/bsTable-3.3.7/bootstrapTable.min.css" rel="stylesheet" />
+<script src="libs/bsTable-3.3.7/bootstrapTable.js"></script>
 
 
 
@@ -109,6 +113,68 @@
             <section class="normal" id="section-">
 <div id="eda" class="section level1 hasAnchor" number="3">
 <h1><span class="header-section-number">Capítulo 3</span> Análisis exploratorio<a href="eda.html#eda" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<table class="table" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+(#tab:edad_num)Resumen descriptivo de la Edad
+</caption>
+<thead>
+<tr>
+<th style="text-align:right;">
+n
+</th>
+<th style="text-align:right;">
+prom
+</th>
+<th style="text-align:right;">
+ds
+</th>
+<th style="text-align:right;">
+mediana
+</th>
+<th style="text-align:right;">
+q1
+</th>
+<th style="text-align:right;">
+q3
+</th>
+<th style="text-align:right;">
+edad_min
+</th>
+<th style="text-align:right;">
+edad_max
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+273
+</td>
+<td style="text-align:right;">
+22.81
+</td>
+<td style="text-align:right;">
+1.36
+</td>
+<td style="text-align:right;">
+23
+</td>
+<td style="text-align:right;">
+22
+</td>
+<td style="text-align:right;">
+23
+</td>
+<td style="text-align:right;">
+20
+</td>
+<td style="text-align:right;">
+28
+</td>
+</tr>
+</tbody>
+</table>
+<p>Un total de 273 estudiantes completó el cuestionario; para el análisis descriptivo de la edad no se excluyeron casos por datos faltantes, por lo que se analizaron todas las observaciones. La edad de los participantes presentó un promedio de 22.81 años (DE = 1.36 años), donde el <span class="math inline">\(50\%\)</span> de 23 años. Además, las edades oscilaron entre 20 y 28 años.</p>
 
 </div>
             </section>
@@ -171,6 +237,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>
