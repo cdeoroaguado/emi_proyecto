@@ -10,3 +10,8 @@ variables-del-perfil-lingüistico
 english-medium-instruction-emi
 variables-adicionales
 variables-de-english-medium-instruction-emi
+variables-sociodemográficas-1
+variables-de-antecedentes-educativos-1
+variables-del-perfil-lingüistico-1
+variables-de-english-medium-instruction-emi-1
+variables-adicionales-1
