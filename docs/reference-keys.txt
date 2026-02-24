@@ -8,3 +8,4 @@ variables-adicionales
 eda
 análisis-de-las-variables-sociodemográficas
 análisis-de-las-variables-de-antecedentes-educativos
+análisis-del-perfil-lingüistico
