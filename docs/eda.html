@@ -23,7 +23,7 @@
 <meta name="author" content="Docentes de ingles y ciencia de datos" />
 
 
-<meta name="date" content="2026-02-24" />
+<meta name="date" content="2026-02-25" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -91,6 +91,10 @@
 <li class="chapter" data-level="3.1" data-path="02-eda.html"><a href="#an%C3%A1lisis-de-las-variables-sociodemogr%C3%A1ficas"><i class="fa fa-check"></i><b>3.1</b> Análisis de las variables sociodemográficas</a></li>
 <li class="chapter" data-level="3.2" data-path="02-eda.html"><a href="#an%C3%A1lisis-de-las-variables-de-antecedentes-educativos"><i class="fa fa-check"></i><b>3.2</b> Análisis de las variables de antecedentes educativos</a></li>
 <li class="chapter" data-level="3.3" data-path="02-eda.html"><a href="#an%C3%A1lisis-del-perfil-ling%C3%BCistico"><i class="fa fa-check"></i><b>3.3</b> Análisis del perfil lingüistico</a></li>
+<li class="chapter" data-level="3.4" data-path="02-eda.html"><a href="#an%C3%A1lisis-de-emi"><i class="fa fa-check"></i><b>3.4</b> Análisis de EMI</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="eda.html"><a href="eda.html#dominio-del-ingles"><i class="fa fa-check"></i><b>3.4.1</b> Dominio del Ingles</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="" data-path="referencias.html"><a href="referencias.html"><i class="fa fa-check"></i>Referencias</a></li>
 <li class="divider"></li>
@@ -118,7 +122,7 @@
 <div id="análisis-de-las-variables-sociodemográficas" class="section level2 hasAnchor" number="3.1">
 <h2><span class="header-section-number">3.1</span> Análisis de las variables sociodemográficas<a href="#an%C3%A1lisis-de-las-variables-sociodemogr%C3%A1ficas" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <table>
-<caption>(#tab:edad_num)Resumen descriptivo de la Edad</caption>
+<caption><span id="tab:edadnum">Tabla 3.1: </span>Resumen descriptivo de la Edad</caption>
 <thead>
 <tr class="header">
 <th align="right">n</th>
@@ -144,9 +148,9 @@
 </tr>
 </tbody>
 </table>
-<p>En este estudio se recolectaron datos mediante un cuestionario en línea para caracterizar a los participantes y contextualizar los análisis posteriores. Un total de 273 estudiantes completó el cuestionario. Para el análisis descriptivo de la edad, se excluyeron 3 registros por datos faltantes, por lo que se contó con 270 estudiantes. La edad de los participantes presentó un promedio de 22.81 años (DE = 1.36 años), donde el <span class="math inline">\(50\%\)</span> de los participates tiene edad menor o igual 23 años. Además, las edades oscilaron entre 20 y 28 años (ver <code>Tabla \@ref(tab:edad_num)</code>).</p>
+<p>En este estudio se recolectaron datos mediante un cuestionario en línea para caracterizar a los participantes y contextualizar los análisis posteriores. Un total de 273 estudiantes completó el cuestionario. Para el análisis descriptivo de la edad, se excluyeron 3 registros por datos faltantes, por lo que se contó con 270 estudiantes. La edad de los participantes presentó un promedio de 22.81 años (DE = 1.36 años), donde el <span class="math inline">\(50\%\)</span> de los participates tiene edad menor o igual 23 años. Además, las edades oscilaron entre 20 y 28 años (ver <code>Tabla \@ref(tab:edadnum)</code>).</p>
 <table>
-<caption>(#tab:vars_cat_falt)Resumen general (n válidos, faltantes y % faltantes)</caption>
+<caption><span id="tab:varscatfalt">Tabla 3.2: </span>Resumen general (n válidos, faltantes y % faltantes)</caption>
 <thead>
 <tr class="header">
 <th align="left">Variable</th>
@@ -184,7 +188,7 @@
 </table>
 <p>En relación con la calidad de los datos para las variables sociodemográficas analizadas (Género, Estrato socioeconómico, y Semestre actual), no se identificaron valores faltantes (0 casos; 0% de datos perdidos). Esto evidencia una completitud total en estas variables, lo que permite realizar los análisis descriptivos posteriores sin necesidad de imputación o exclusión de casos por ausencia de información.</p>
 <table>
-<caption>(#tab:socio_demo)Distribución de variables sociodemográficas (conteo y porcentaje)</caption>
+<caption><span id="tab:sociodemo">Tabla 3.3: </span>Distribución de variables sociodemográficas (conteo y porcentaje)</caption>
 <thead>
 <tr class="header">
 <th align="left">Variable</th>
@@ -286,15 +290,15 @@
 </tr>
 </tbody>
 </table>
-<p>Los participantes fueron estudiantes de pregrado matriculados en tres programas académicos: Administración de Empresas (158; 57.88%), Negocios Internacionales (79; 28.94%) y Contaduría Pública (36; 13.19%). El semestre cursado osciló entre séptimo y décimo, con una mayor proporción de estudiantes en décimo semestre (104; 38.1%) y octavo semestre (92; 33.7%). En cuanto al género, 132 (48.35%) participantes se identificaron como femenino y 141 (51.65%) como masculino. En términos socioeconómicos, la distribución se concentró en los estratos 4 (67; 24.54%) y 3 (59; 21.61%), seguidos por los estratos 6, 5, 2 y 1 (ver <code>Tabla \@ref(tab:socio_demo)</code>).</p>
-<p><img src="bookdown-demo_files/figure-html/graf_socio_demo_1-1.png" width="672" /></p>
+<p>Los participantes fueron estudiantes de pregrado matriculados en tres programas académicos: Administración de Empresas (158; 57.88%), Negocios Internacionales (79; 28.94%) y Contaduría Pública (36; 13.19%). El semestre cursado osciló entre séptimo y décimo, con una mayor proporción de estudiantes en décimo semestre (104; 38.1%) y octavo semestre (92; 33.7%). En cuanto al género, 132 (48.35%) participantes se identificaron como femenino y 141 (51.65%) como masculino. En términos socioeconómicos, la distribución se concentró en los estratos 4 (67; 24.54%) y 3 (59; 21.61%), seguidos por los estratos 6, 5, 2 y 1 (ver <code>Tabla \@ref(tab:sociodemo)</code>).</p>
+<p><img src="bookdown-demo_files/figure-html/grafsociodemo1-1.png" width="672" /></p>
 <p>Cabe resaltar que las conclusiones serán parecedas o las mismas que las de la tabla.</p>
 </div>
 <div id="análisis-de-las-variables-de-antecedentes-educativos" class="section level2 hasAnchor" number="3.2">
 <h2><span class="header-section-number">3.2</span> Análisis de las variables de antecedentes educativos<a href="#an%C3%A1lisis-de-las-variables-de-antecedentes-educativos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Ahora, veamos el análisis de las variables de antecedentes educativos.</p>
 <table>
-<caption>(#tab:ant_educ)Calidad de datos: variables de antecedentes educativos</caption>
+<caption><span id="tab:anteduc">Tabla 3.4: </span>Calidad de datos: variables de antecedentes educativos</caption>
 <colgroup>
 <col width="64%" />
 <col width="5%" />
@@ -338,7 +342,7 @@
 </table>
 <p>En relación con la calidad de los datos para las variables de antecedentes educativos, no se identificaron valores faltantes (0 casos; 0% de datos perdidos). Esto demuestra una completitud de los datos, lo que permite realizar los análisis sin necesidad de imputación o exclusión de casos por ausencia de información.</p>
 <table>
-<caption>(#tab:tabla_ant_educ)Distribución de variables de antecedentes educativos (n y %)</caption>
+<caption><span id="tab:tablaanteduc">Tabla 3.5: </span>Distribución de variables de antecedentes educativos (n y %)</caption>
 <colgroup>
 <col width="60%" />
 <col width="21%" />
@@ -440,8 +444,8 @@
 </tr>
 </tbody>
 </table>
-<p>La mayoría de los estudiantes provenía de colegios privados (223; 81.68%) y 146 reportó haber cursado el bachillerato en un colegio bilingüe (53.48%). En cuanto al capital educativo del hogar, la escolaridad máxima reportada para la madre se concentró en Pregrado (106; 38.83%), mientras que para el padre predominó Posgrado (94; 34.43%) (Ver <code>Tabla @ref(tab:tabla_ant_educ)</code>).</p>
-<p><img src="bookdown-demo_files/figure-html/graf_ant_educ-1.png" width="672" /></p>
+<p>La mayoría de los estudiantes provenía de colegios privados (223; 81.68%) y 146 reportó haber cursado el bachillerato en un colegio bilingüe (53.48%). En cuanto al capital educativo del hogar, la escolaridad máxima reportada para la madre se concentró en Pregrado (106; 38.83%), mientras que para el padre predominó Posgrado (94; 34.43%) (Ver <code>Tabla <a href="eda.html#tab:tablaanteduc">3.5</a></code>).</p>
+<p><img src="bookdown-demo_files/figure-html/grafanteduc-1.png" width="672" /></p>
 <p>Las interpretaciones son similares a las de la tabla.</p>
 </div>
 <div id="análisis-del-perfil-lingüistico" class="section level2 hasAnchor" number="3.3">
@@ -462,7 +466,7 @@ debilidades y patrones de comportamiento comunicativo para
 diseñar estrategias pedagógicas más efectivas, personalizadas
 y basadas en evidencia.</p>
 <table>
-<caption>(#tab:ana_perf_ling_falt)Calidad de datos: perfil lingüístico (faltantes)</caption>
+<caption><span id="tab:anaperflingfalt">Tabla 3.6: </span>Calidad de datos: perfil lingüístico (faltantes)</caption>
 <thead>
 <tr class="header">
 <th align="left">Variable</th>
@@ -506,7 +510,7 @@ y basadas en evidencia.</p>
 </table>
 <p>En relación con la calidad de los datos para las variables del perfil lingüistico, no se identificaron valores faltantes (0 casos; 0% de datos perdidos).</p>
 <table>
-<caption>(#tab:ana_perf_ling)Perfil lingüístico: distribución (n y %)</caption>
+<caption><span id="tab:anaperfling">Tabla 3.7: </span>Perfil lingüístico: distribución (n y %)</caption>
 <thead>
 <tr class="header">
 <th align="left">Variable</th>
@@ -633,9 +637,239 @@ y basadas en evidencia.</p>
 </tbody>
 </table>
 <p>En relación con el perfil lingüísticopercibido, la distribución evidencia una concentración predominante en los niveles bueno y excelente tanto en la valoración general como en las destrezas específicas. En el nivel general de inglés, la mayoría se ubicó en excelente (115; 42.12%) y bueno (114; 41.76%), mientras que regular representó una proporción menor (43; 15.75%) y malo fue marginal (1; 0.37%). Por destrezas, se observó un patrón similar: en habla, predominaron bueno (111; 40.66%) y excelente (100; 36.63%); en escucha, se registró una mayor concentración en excelente (135; 49.45%), seguida de bueno (98; 35.9%); y en lectura, también predominó excelente (141; 51.65%) junto con bueno (103; 37.73%). En contraste, en escritura se observó un mayor peso relativo en bueno (125; 45.79%) frente a excelente (88; 32.23%), y una proporción no despreciable en regular (54; 19.78%). En conjunto, estos resultados sugieren un perfil general favorable en inglés, con mayores fortalezas percibidas en comprensión (escucha y lectura) y un desempeño relativamente menor en producción escrita.</p>
-<p><img src="bookdown-demo_files/figure-html/graf_perf_ling-1.png" width="672" /></p>
+<p><img src="bookdown-demo_files/figure-html/grafperfling-1.png" width="672" /></p>
 <p>Las interpretaciones de las gráficas son similares a las de las tablas.</p>
+</div>
+<div id="análisis-de-emi" class="section level2 hasAnchor" number="3.4">
+<h2><span class="header-section-number">3.4</span> Análisis de EMI<a href="#an%C3%A1lisis-de-emi" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="dominio-del-ingles" class="section level3 hasAnchor" number="3.4.1">
+<h3><span class="header-section-number">3.4.1</span> Dominio del Ingles<a href="eda.html#dominio-del-ingles" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<table>
+<caption><span id="tab:analisiscatdom">Tabla 3.8: </span>Dominio del Inglés: distribución por ítem (n y %)</caption>
+<colgroup>
+<col width="72%" />
+<col width="17%" />
+<col width="2%" />
+<col width="7%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">item_original</th>
+<th align="left">respuesta</th>
+<th align="right">n</th>
+<th align="right">porcentaje</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">En general, comprendí las explicaciones en inglés dadas por los profesores.</td>
+<td align="left">Parcialmente en desacuerdo</td>
+<td align="right">7</td>
+<td align="right">2.56</td>
+</tr>
+<tr class="even">
+<td align="left">En general, comprendí las explicaciones en inglés dadas por los profesores.</td>
+<td align="left">Indiferente</td>
+<td align="right">13</td>
+<td align="right">4.76</td>
+</tr>
+<tr class="odd">
+<td align="left">En general, comprendí las explicaciones en inglés dadas por los profesores.</td>
+<td align="left">Parcialmente de acuerdo</td>
+<td align="right">68</td>
+<td align="right">24.91</td>
+</tr>
+<tr class="even">
+<td align="left">En general, comprendí las explicaciones en inglés dadas por los profesores.</td>
+<td align="left">Totalmente de acuerdo</td>
+<td align="right">185</td>
+<td align="right">67.77</td>
+</tr>
+<tr class="odd">
+<td align="left">Leer textos académicos en inglés fue un reto que dificultó mi comprensión de las temáticas del curso.</td>
+<td align="left">Totalmente en desacuerdo</td>
+<td align="right">105</td>
+<td align="right">38.46</td>
+</tr>
+<tr class="even">
+<td align="left">Leer textos académicos en inglés fue un reto que dificultó mi comprensión de las temáticas del curso.</td>
+<td align="left">Parcialmente en desacuerdo</td>
+<td align="right">53</td>
+<td align="right">19.41</td>
+</tr>
+<tr class="odd">
+<td align="left">Leer textos académicos en inglés fue un reto que dificultó mi comprensión de las temáticas del curso.</td>
+<td align="left">Indiferente</td>
+<td align="right">26</td>
+<td align="right">9.52</td>
+</tr>
+<tr class="even">
+<td align="left">Leer textos académicos en inglés fue un reto que dificultó mi comprensión de las temáticas del curso.</td>
+<td align="left">Parcialmente de acuerdo</td>
+<td align="right">55</td>
+<td align="right">20.15</td>
+</tr>
+<tr class="odd">
+<td align="left">Leer textos académicos en inglés fue un reto que dificultó mi comprensión de las temáticas del curso.</td>
+<td align="left">Totalmente de acuerdo</td>
+<td align="right">34</td>
+<td align="right">12.45</td>
+</tr>
+<tr class="even">
+<td align="left">Los textos y materiales en inglés fueron comprensibles en la mayoría de los cursos.</td>
+<td align="left">Totalmente en desacuerdo</td>
+<td align="right">1</td>
+<td align="right">0.37</td>
+</tr>
+<tr class="odd">
+<td align="left">Los textos y materiales en inglés fueron comprensibles en la mayoría de los cursos.</td>
+<td align="left">Parcialmente en desacuerdo</td>
+<td align="right">11</td>
+<td align="right">4.03</td>
+</tr>
+<tr class="even">
+<td align="left">Los textos y materiales en inglés fueron comprensibles en la mayoría de los cursos.</td>
+<td align="left">Indiferente</td>
+<td align="right">12</td>
+<td align="right">4.40</td>
+</tr>
+<tr class="odd">
+<td align="left">Los textos y materiales en inglés fueron comprensibles en la mayoría de los cursos.</td>
+<td align="left">Parcialmente de acuerdo</td>
+<td align="right">90</td>
+<td align="right">32.97</td>
+</tr>
+<tr class="even">
+<td align="left">Los textos y materiales en inglés fueron comprensibles en la mayoría de los cursos.</td>
+<td align="left">Totalmente de acuerdo</td>
+<td align="right">159</td>
+<td align="right">58.24</td>
+</tr>
+<tr class="odd">
+<td align="left">Me resultó fácil expresar mis ideas y opiniones en inglés durante las clases.</td>
+<td align="left">Totalmente en desacuerdo</td>
+<td align="right">9</td>
+<td align="right">3.30</td>
+</tr>
+<tr class="even">
+<td align="left">Me resultó fácil expresar mis ideas y opiniones en inglés durante las clases.</td>
+<td align="left">Parcialmente en desacuerdo</td>
+<td align="right">19</td>
+<td align="right">6.96</td>
+</tr>
+<tr class="odd">
+<td align="left">Me resultó fácil expresar mis ideas y opiniones en inglés durante las clases.</td>
+<td align="left">Indiferente</td>
+<td align="right">29</td>
+<td align="right">10.62</td>
+</tr>
+<tr class="even">
+<td align="left">Me resultó fácil expresar mis ideas y opiniones en inglés durante las clases.</td>
+<td align="left">Parcialmente de acuerdo</td>
+<td align="right">80</td>
+<td align="right">29.30</td>
+</tr>
+<tr class="odd">
+<td align="left">Me resultó fácil expresar mis ideas y opiniones en inglés durante las clases.</td>
+<td align="left">Totalmente de acuerdo</td>
+<td align="right">136</td>
+<td align="right">49.82</td>
+</tr>
+<tr class="even">
+<td align="left">Mi nivel de participación en las clases dictadas en inglés es el mismo que cuando las clases son en español.</td>
+<td align="left">Totalmente en desacuerdo</td>
+<td align="right">26</td>
+<td align="right">9.52</td>
+</tr>
+<tr class="odd">
+<td align="left">Mi nivel de participación en las clases dictadas en inglés es el mismo que cuando las clases son en español.</td>
+<td align="left">Parcialmente en desacuerdo</td>
+<td align="right">29</td>
+<td align="right">10.62</td>
+</tr>
+<tr class="even">
+<td align="left">Mi nivel de participación en las clases dictadas en inglés es el mismo que cuando las clases son en español.</td>
+<td align="left">Indiferente</td>
+<td align="right">54</td>
+<td align="right">19.78</td>
+</tr>
+<tr class="odd">
+<td align="left">Mi nivel de participación en las clases dictadas en inglés es el mismo que cuando las clases son en español.</td>
+<td align="left">Parcialmente de acuerdo</td>
+<td align="right">57</td>
+<td align="right">20.88</td>
+</tr>
+<tr class="even">
+<td align="left">Mi nivel de participación en las clases dictadas en inglés es el mismo que cuando las clases son en español.</td>
+<td align="left">Totalmente de acuerdo</td>
+<td align="right">107</td>
+<td align="right">39.19</td>
+</tr>
+<tr class="odd">
+<td align="left">Sentía que no era capaz de aprender bien debido a mis limitaciones en inglés.</td>
+<td align="left">Totalmente en desacuerdo</td>
+<td align="right">149</td>
+<td align="right">54.58</td>
+</tr>
+<tr class="even">
+<td align="left">Sentía que no era capaz de aprender bien debido a mis limitaciones en inglés.</td>
+<td align="left">Parcialmente en desacuerdo</td>
+<td align="right">36</td>
+<td align="right">13.19</td>
+</tr>
+<tr class="odd">
+<td align="left">Sentía que no era capaz de aprender bien debido a mis limitaciones en inglés.</td>
+<td align="left">Indiferente</td>
+<td align="right">26</td>
+<td align="right">9.52</td>
+</tr>
+<tr class="even">
+<td align="left">Sentía que no era capaz de aprender bien debido a mis limitaciones en inglés.</td>
+<td align="left">Parcialmente de acuerdo</td>
+<td align="right">35</td>
+<td align="right">12.82</td>
+</tr>
+<tr class="odd">
+<td align="left">Sentía que no era capaz de aprender bien debido a mis limitaciones en inglés.</td>
+<td align="left">Totalmente de acuerdo</td>
+<td align="right">27</td>
+<td align="right">9.89</td>
+</tr>
+<tr class="even">
+<td align="left">Tuve dificultades para participar oralmente debido a mi nivel de idioma.</td>
+<td align="left">Totalmente en desacuerdo</td>
+<td align="right">117</td>
+<td align="right">42.86</td>
+</tr>
+<tr class="odd">
+<td align="left">Tuve dificultades para participar oralmente debido a mi nivel de idioma.</td>
+<td align="left">Parcialmente en desacuerdo</td>
+<td align="right">41</td>
+<td align="right">15.02</td>
+</tr>
+<tr class="even">
+<td align="left">Tuve dificultades para participar oralmente debido a mi nivel de idioma.</td>
+<td align="left">Indiferente</td>
+<td align="right">33</td>
+<td align="right">12.09</td>
+</tr>
+<tr class="odd">
+<td align="left">Tuve dificultades para participar oralmente debido a mi nivel de idioma.</td>
+<td align="left">Parcialmente de acuerdo</td>
+<td align="right">46</td>
+<td align="right">16.85</td>
+</tr>
+<tr class="even">
+<td align="left">Tuve dificultades para participar oralmente debido a mi nivel de idioma.</td>
+<td align="left">Totalmente de acuerdo</td>
+<td align="right">36</td>
+<td align="right">13.19</td>
+</tr>
+</tbody>
+</table>
+<p><img src="bookdown-demo_files/figure-html/grafcatdom-1.png" width="672" /></p>
 
+</div>
 </div>
 </div>
             </section>
