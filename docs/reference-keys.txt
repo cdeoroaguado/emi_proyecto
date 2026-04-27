@@ -28,3 +28,11 @@ tab:tablaanteduc
 tab:anaperflingfalt
 tab:anaperfling
 tab:analisiscatdom
+tab:analisiscatdomad
+aprendizaje-disciplinar-en-emi
+tab:analisiscatdompr
+pedagogía-y-recursos-para-el-aprendizaje
+tab:analisiscatdomma
+motivación-y-actitudes
+tab:analisiscatdommap
+proyección
