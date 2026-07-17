@@ -36,3 +36,7 @@ tab:analisiscatdomma
 motivación-y-actitudes
 tab:analisiscatdommap
 proyección
+tab:varemingles
+tab:preguntaspingles
+tab:varopcingles
+tab:preguntasqingles
